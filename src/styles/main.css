@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#place-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.place-div {
+  border: 1px solid black;
+  width: 27%;
+}
+
+.add-interest-btn {
+  margin: 10px auto; 
+}
+
+input {
+  margin: 5px 0;
+}
+
+.interest-cards-container {
+  overflow-y: auto;
+  height: 25em;
+}
