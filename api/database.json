@@ -26,164 +26,60 @@
       "id": 1
     },
     {
-      "placeId": "1",
-      "name": "test interest",
-      "description": "desc",
-      "cost": "costhfuaahiogrhoe",
+      "placeId": "2",
+      "name": "test 1",
+      "description": "fewafew",
+      "cost": "feafea",
       "review": "",
       "id": 2
     },
     {
-      "placeId": "1",
-      "name": "test interest 3",
-      "description": "desc",
-      "cost": "costhfuaahiogrhoe",
+      "placeId": "3",
+      "name": "test 1",
+      "description": "fewafew",
+      "cost": "feafea",
       "review": "",
       "id": 3
     },
     {
       "placeId": "1",
-      "name": "test interest 4",
-      "description": "desc",
-      "cost": "costhfuaahiogrhoe",
+      "name": "test 1",
+      "description": "fewafew",
+      "cost": "feafea",
       "review": "",
       "id": 4
     },
     {
-      "placeId": "2",
-      "name": "test interstest 555",
+      "placeId": "1",
+      "name": "test 2",
       "description": "fewafea",
-      "cost": "feawfewa",
+      "cost": "feafewa",
       "review": "",
       "id": 5
     },
     {
-      "placeId": "1",
-      "name": "test interest 100",
-      "description": "feawfewa",
+      "placeId": "3",
+      "name": "test 4",
+      "description": "feawfeaw",
       "cost": "feafeaw",
       "review": "",
       "id": 6
     },
     {
-      "placeId": "1",
-      "name": "test intersest 1000",
-      "description": "test",
-      "cost": "test",
+      "placeId": "3",
+      "name": "",
+      "description": "",
+      "cost": "",
       "review": "",
       "id": 7
     },
     {
-      "placeId": "1",
-      "name": "test 1",
-      "description": "test",
-      "cost": "test",
+      "placeId": "2",
+      "name": "test 5",
+      "description": "feafewaf",
+      "cost": "feafewa",
       "review": "",
       "id": 8
-    },
-    {
-      "placeId": "1",
-      "name": "test 1",
-      "description": "test",
-      "cost": "test",
-      "review": "",
-      "id": 9
-    },
-    {
-      "placeId": "1",
-      "name": "test 1",
-      "description": "test",
-      "cost": "test",
-      "review": "",
-      "id": 10
-    },
-    {
-      "placeId": "1",
-      "name": "test 1",
-      "description": "test",
-      "cost": "test",
-      "review": "",
-      "id": 11
-    },
-    {
-      "placeId": "1",
-      "name": "test 1",
-      "description": "test",
-      "cost": "test",
-      "review": "",
-      "id": 12
-    },
-    {
-      "placeId": "1",
-      "name": "test 1",
-      "description": "test",
-      "cost": "test",
-      "review": "",
-      "id": 13
-    },
-    {
-      "placeId": "1",
-      "name": "test 1",
-      "description": "test",
-      "cost": "test",
-      "review": "",
-      "id": 14
-    },
-    {
-      "placeId": "1",
-      "name": "test 1",
-      "description": "test",
-      "cost": "test",
-      "review": "",
-      "id": 15
-    },
-    {
-      "placeId": "3",
-      "name": "france interest",
-      "description": "teatea",
-      "cost": "fewafeaw",
-      "review": "",
-      "id": 16
-    },
-    {
-      "placeId": "",
-      "name": "",
-      "description": "",
-      "cost": "",
-      "review": "",
-      "id": 17
-    },
-    {
-      "placeId": "",
-      "name": "",
-      "description": "",
-      "cost": "",
-      "review": "",
-      "id": 18
-    },
-    {
-      "placeId": "",
-      "name": "",
-      "description": "",
-      "cost": "",
-      "review": "",
-      "id": 19
-    },
-    {
-      "placeId": "",
-      "name": "",
-      "description": "",
-      "cost": "",
-      "review": "",
-      "id": 20
-    },
-    {
-      "placeId": "",
-      "name": "",
-      "description": "",
-      "cost": "",
-      "review": "",
-      "id": 21
     }
   ]
 }

@@ -25,13 +25,12 @@ data.getAllDestinations()
 
 const interestFormHandler = () => {
     if (event.target.id === "add-interest-btn") {
-      addInterestFormContainer.innerHTML = ""
       renderPage.renderAddInterestForm()
     } else if (event.target.id === "save-new-interest-btn") {
       const interestName = document.querySelector("#interest-name-input").value
       const interestDescription = document.querySelector("#interest-description-input").value
       const interestCost = document.querySelector("#interest-cost-input").value
-      const placeId = ""
+      const placeId = document.querySelector("#interest-place-select").value.split("--")[1]
       const newInterestObj = {
         placeId: placeId,
         name: interestName,
@@ -39,12 +38,13 @@ const interestFormHandler = () => {
         cost: interestCost,
         review: ""
       }
+      renderPage.renderInterestBtn()
       data.postNewInterest(newInterestObj)
       .then(displayAllInterests(placeId))
     } else if (event.target.id === "cancel-new-interest-btn") {
-      addInterestFormContainer.innerHTML = ""
       renderPage.renderInterestBtn()
     }
 }
 
 addInterestFormContainer.addEventListener("click", interestFormHandler)
+

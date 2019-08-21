@@ -14,6 +14,7 @@ const renderPage = {
   renderInterestBtn() {
     const addInterestFormContainer = document.querySelector("#add-interest-form-container")
     const addInterestBtn = elFactory("button", {id: "add-interest-btn", classList: ["add-interest-btn"]}, "Add an Interest")
+    addInterestFormContainer.innerHTML = ""
     addInterestFormContainer.appendChild(addInterestBtn)
   },
   renderPage() {
@@ -35,6 +36,7 @@ const renderPage = {
     const placeholderOption = elFactory("option", {}, "Select a destination")
     const saveNewInterestBtn = elFactory("button", {id: "save-new-interest-btn"}, "Save New Interest")
     const cancelNewInterestBtn = elFactory("button", {id: "cancel-new-interest-btn"}, "Cancel")
+    addInterestFormContainer.innerHTML = ""
     addInterestFormContainer.appendChild(formDiv)
     formDiv.appendChild(interestNameInput)
     formDiv.appendChild(interestDescriptionInput)
