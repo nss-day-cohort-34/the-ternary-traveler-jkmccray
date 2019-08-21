@@ -13,14 +13,7 @@ const renderPage = {
   },
   renderInterestBtn() {
     const addInterestFormContainer = document.querySelector("#add-interest-form-container")
-    console.log(addInterestFormContainer)
-    const formDiv = document.querySelector("#form-div")
-    console.log(formDiv)
     const addInterestBtn = elFactory("button", {id: "add-interest-btn", classList: ["add-interest-btn"]}, "Add an Interest")
-    console.log(addInterestBtn)
-    if (formDiv) {
-      addInterestFormContainer.removeChild(formDiv)
-    }
     addInterestFormContainer.appendChild(addInterestBtn)
   },
   renderPage() {
@@ -34,7 +27,6 @@ const renderPage = {
   },
   renderAddInterestForm() {
     const addInterestFormContainer = document.querySelector("#add-interest-form-container")
-    const addInterestBtn = document.querySelector("#add-interest-btn")
     const formDiv = elFactory("div", {id: "form-div"})
     const interestNameInput = elFactory("input", {id: "interest-name-input", placeholder: "Interest Name"})
     const interestDescriptionInput = elFactory("input", {id: "interest-description-input", placeholder: "Interest Description"})
@@ -43,9 +35,6 @@ const renderPage = {
     const interestOption1 = elFactory("option", {value: 1})
     const saveNewInterestBtn = elFactory("button", {id: "save-new-interest-btn"}, "Save New Interest")
     const cancelNewInterestBtn = elFactory("button", {id: "cancel-new-interest-btn"}, "Cancel")
-    if (addInterestBtn !== null) {
-      // addInterestFormContainer.removeChild(addInterestBtn)
-    }
     addInterestFormContainer.appendChild(formDiv)
     formDiv.appendChild(interestNameInput)
     formDiv.appendChild(interestDescriptionInput)

@@ -1,7 +1,6 @@
 import renderPage from "./dom.js";
 import data from "./data.js";
 
-const placeContainer = document.querySelector("#place-container")
 const addInterestFormContainer = document.querySelector("#add-interest-form-container")
 
 renderPage.renderPage()
@@ -24,25 +23,28 @@ data.getAllDestinations()
     })
   })
 
-addInterestFormContainer.addEventListener("click", () => {
-  if (event.target.id = "add-interest-btn") {
-    renderPage.renderAddInterestForm()
-  }
-  if (event.target.id = "save-new-interest-btn") {
-    const interestName = document.querySelector(`#interest-name-input--${idNum}`).value
-    const interestDescription = document.querySelector(`#interest-description-input--${idNum}`).value
-    const interestCost = document.querySelector(`#interest-cost-input--${idNum}`).value
-    const newInterestObj = {
-      placeId: idNum,
-      name: interestName,
-      description: interestDescription,
-      cost: interestCost,
-      review: ""
+const interestFormHandler = () => {
+    if (event.target.id === "add-interest-btn") {
+      addInterestFormContainer.innerHTML = ""
+      renderPage.renderAddInterestForm()
+    } else if (event.target.id === "save-new-interest-btn") {
+      const interestName = document.querySelector("#interest-name-input").value
+      const interestDescription = document.querySelector("#interest-description-input").value
+      const interestCost = document.querySelector("#interest-cost-input").value
+      const placeId = ""
+      const newInterestObj = {
+        placeId: placeId,
+        name: interestName,
+        description: interestDescription,
+        cost: interestCost,
+        review: ""
+      }
+      data.postNewInterest(newInterestObj)
+      .then(displayAllInterests(placeId))
+    } else if (event.target.id === "cancel-new-interest-btn") {
+      addInterestFormContainer.innerHTML = ""
+      renderPage.renderInterestBtn()
     }
-    data.postNewInterest(newInterestObj)
-      .then(displayAllInterests(idNum))
-  }
-  // if (event.target.id.includes("cancel-new-interest-btn")) {
-  //   renderPage.renderInterestBtn()
-  // }
-})
+}
+
+addInterestFormContainer.addEventListener("click", interestFormHandler)
