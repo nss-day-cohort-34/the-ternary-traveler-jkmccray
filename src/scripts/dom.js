@@ -31,8 +31,8 @@ const renderPage = {
     const interestNameInput = elFactory("input", {id: "interest-name-input", placeholder: "Interest Name"})
     const interestDescriptionInput = elFactory("input", {id: "interest-description-input", placeholder: "Interest Description"})
     const interestCostInput = elFactory("input", {id: "interest-cost-input", placeholder: "Cost"})
-    const interestPlaceSelect = elFactory("select", {id: "interestPlaceSelect"})
-    const interestOption1 = elFactory("option", {value: 1})
+    const interestPlaceSelect = elFactory("select", {id: "interest-place-select"})
+    const placeholderOption = elFactory("option", {}, "Select a destination")
     const saveNewInterestBtn = elFactory("button", {id: "save-new-interest-btn"}, "Save New Interest")
     const cancelNewInterestBtn = elFactory("button", {id: "cancel-new-interest-btn"}, "Cancel")
     addInterestFormContainer.appendChild(formDiv)
@@ -40,8 +40,18 @@ const renderPage = {
     formDiv.appendChild(interestDescriptionInput)
     formDiv.appendChild(interestCostInput)
     formDiv.appendChild(interestPlaceSelect)
+    interestPlaceSelect.appendChild(placeholderOption)
     formDiv.appendChild(saveNewInterestBtn)
     formDiv.appendChild(cancelNewInterestBtn)
+    data.getAllDestinations()
+    .then(places => {
+      places.forEach(placeObj => this.renderPlaceOptions(placeObj))
+    })
+  },
+  renderPlaceOptions(placeObj) {
+    const interestPlaceSelect = document.querySelector("#interest-place-select")
+    const interestPlaceOption = elFactory("option", {value: `place-option--${placeObj.id}`}, placeObj.name)
+    interestPlaceSelect.appendChild(interestPlaceOption)
   },
   renderInterest(interestObj) {
     const interestCardsContainer = document.querySelector(`#interest-cards-container--${interestObj.placeId}`)
