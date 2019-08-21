@@ -2,6 +2,7 @@ import renderPage from "./dom.js";
 import data from "./data.js";
 
 const addInterestFormContainer = document.querySelector("#add-interest-form-container")
+const placeContainer = document.querySelector("#place-container")
 
 renderPage.renderPage()
 
@@ -48,3 +49,8 @@ const interestFormHandler = () => {
 
 addInterestFormContainer.addEventListener("click", interestFormHandler)
 
+placeContainer.addEventListener("click", () => {
+  const idNum = event.target.id.split("--")[1]
+  if (event.target.id.startsWith("edit-interest-btn")) {
+  }
+})

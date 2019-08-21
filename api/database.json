@@ -22,7 +22,7 @@
       "name": "test interest",
       "description": "desc",
       "cost": "cost????",
-      "review": "",
+      "review": "test review",
       "id": 1
     },
     {
@@ -80,6 +80,14 @@
       "cost": "feafewa",
       "review": "",
       "id": 8
+    },
+    {
+      "placeId": "3",
+      "name": "12457f",
+      "description": "feawfea",
+      "cost": "feawfeaw",
+      "review": "",
+      "id": 9
     }
   ]
 }

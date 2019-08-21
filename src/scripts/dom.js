@@ -61,16 +61,17 @@ const renderPage = {
     const interestName = elFactory("h2", {classList: ["interest-card-name"]}, interestObj.name)
     const interestDescription = elFactory("p", {classList: ["interest-card-description"]}, interestObj.description)
     const interestCost = elFactory("p", {classList: ["interest-card-cost"]}, interestObj.cost)
-    const interestReview = elFactory("p", {classList: ["interest-card-review"]}, "Review: ")
+    const interestReview = elFactory("p", {classList: ["interest-card-review"]}, `Review: ${interestObj.review}`)
+    const addReviewInterestBtn = elFactory("button", {classList: ["review-interest-btn"], id: `review-interest-btn--${interestObj.id}`}, "Leave a Review")
     const editInterestBtn = elFactory("button", {classList: ["edit-interest-btn"], id: `edit-interest-btn--${interestObj.id}`}, "Edit")
+    const deleteInterestBtn = elFactory("button", {classList: ["delete-interest-btn"], id: `delete-interest-btn--${interestObj.id}`}, "Delete")
     interestCardsContainer.appendChild(interestDiv)
     interestDiv.appendChild(interestName)
     interestDiv.appendChild(interestDescription)
     interestDiv.appendChild(interestCost)
-    if (interestObj.review) {
-      interestDiv.appendChild(interestReview)
-    }
+    interestObj.review ? interestDiv.appendChild(interestReview) : interestDiv.appendChild(addReviewInterestBtn)
     interestDiv.appendChild(editInterestBtn)
+    interestDiv.appendChild(deleteInterestBtn)
   }
 }
 
