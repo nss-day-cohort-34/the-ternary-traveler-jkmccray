@@ -35,10 +35,11 @@ const data = {
   getAllInterests(placeId) {
     return fetch(`http://localhost:8088/interests?placeId=${placeId}`)
       .then(interests => interests.json())
-  },
-  getAllDestinations() {
-    return fetch("http://localhost:8088/places")
-  }
+    },
+    getAllDestinations() {
+      return fetch("http://localhost:8088/places")
+      .then(interests => interests.json())
+    }
 }
 
 export default data
