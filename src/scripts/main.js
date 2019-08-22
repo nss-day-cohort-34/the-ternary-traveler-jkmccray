@@ -86,11 +86,14 @@ placeContainer.addEventListener("click", () => {
       })
   }
   if (event.target.id.startsWith("delete-interest-btn")) {
-    data.getSingleInterest(idNum)
-      .then(interestObj => {
-        const placeId = interestObj.placeId
-        data.deleteInterest(idNum)
-          .then(() => displayAllInterests(placeId))
-      })
+    const confirmDelete = confirm("Are you sure you want to delete this interest?")
+    if (confirmDelete) {
+      data.getSingleInterest(idNum)
+        .then(interestObj => {
+          const placeId = interestObj.placeId
+          data.deleteInterest(idNum)
+            .then(() => displayAllInterests(placeId))
+        })
+    }
   }
 })

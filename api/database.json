@@ -26,14 +26,6 @@
       "id": 3
     },
     {
-      "placeId": "1",
-      "name": "test 1",
-      "description": "fewafew",
-      "cost": "edit test",
-      "review": "",
-      "id": 4
-    },
-    {
       "placeId": "3",
       "name": "test 4",
       "description": "feawfeaw",
@@ -56,14 +48,6 @@
       "cost": "$1M",
       "review": "",
       "id": 9
-    },
-    {
-      "placeId": "1",
-      "name": "test",
-      "description": "",
-      "cost": "",
-      "review": "",
-      "id": 10
     },
     {
       "placeId": "1",
