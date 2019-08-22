@@ -22,9 +22,9 @@
       "name": "Eiffel Tower",
       "description": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
       "cost": "48.55",
-      "review": "Lorem ipsum dolor amet sartorial sriracha offal photo booth celiac crucifix locavore. Skateboard meh seitan fixie, sustainable raclette jean shorts flannel pork belly. Selvage letterpress vice crucifix gentrify. Jean shorts cold-pressed jianbing cliche. Vape deep v four loko, vegan offal enamel pin retro.",
+      "review": "Lorem ipsum dolor. Skateboard meh fixie, sustainable raclette jean shorts flannel pork belly. Selvage letterpress vice crucifix gentrify. Jean shorts cold-pressed jianbing cliche. Vape deep v four loko, vegan offal enamel pin retro.",
       "id": 1,
-      "rating": 5
+      "rating": 0
     },
     {
       "placeId": 1,
@@ -43,6 +43,15 @@
       "review": "Mlkshk meggings next level, everyday carry XOXO ethical brooklyn disrupt succulents af pitchfork fixie organic williamsburg. Ennui cold-pressed brooklyn forage. Ethical chicharrones distillery migas blog blue bottle four loko actually neutra green juice tilde vexillologist kale chips offal. Lomo pabst fingerstache, chillwave enamel pin taxidermy tousled hashtag 90's.",
       "rating": 4,
       "id": 5
+    },
+    {
+      "placeId": 3,
+      "name": "Louvre Museum",
+      "description": "The Louvre, or the Louvre Museum, is the world's largest art museum and a historic monument in Paris, France. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement.",
+      "cost": "150.00",
+      "review": "",
+      "rating": "",
+      "id": 6
     }
   ]
 }
