@@ -31,7 +31,7 @@ const interestFormHandler = () => {
     const interestName = document.querySelector("#interest-name-input").value
     const interestDescription = document.querySelector("#interest-description-input").value
     const interestCost = document.querySelector("#interest-cost-input").value
-    const placeId = document.querySelector("#interest-place-select").value.split("--")[1]
+    const placeId = parseInt(document.querySelector("#interest-place-select").value.split("--")[1])
     const newInterestObj = {
       placeId: placeId,
       name: interestName,
@@ -66,10 +66,10 @@ placeContainer.addEventListener("click", () => {
   if (event.target.id.startsWith("save-edits-btn")) {
     data.getSingleInterest(idNum)
       .then(interestObj => {
-        const interestCost = document.querySelector("#edit-interest-cost-input").value
-        const interestReview = document.querySelector("#edit-interest-review-input").value
-        interestObj.cost = interestCost
-        interestObj.review = interestReview
+        const interestCost = document.querySelector("#edit-interest-cost-input")
+        const interestReview = document.querySelector("#edit-interest-review-input")
+        interestObj.cost = interestCost.value
+        if (interestReview) {interestObj.review = interestReview.value}
         const placeId = interestObj.placeId
         data.putInterest(interestObj)
           .then(() => displayAllInterests(placeId))

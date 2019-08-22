@@ -18,7 +18,7 @@
   ],
   "interests": [
     {
-      "placeId": "3",
+      "placeId": 3,
       "name": "test 1",
       "description": "fewafew",
       "cost": "feafea",
@@ -26,7 +26,7 @@
       "id": 3
     },
     {
-      "placeId": "3",
+      "placeId": 3,
       "name": "test 4",
       "description": "feawfeaw",
       "cost": "feafeaw",
@@ -34,7 +34,7 @@
       "id": 6
     },
     {
-      "placeId": "2",
+      "placeId": 2,
       "name": "test 5",
       "description": "feafewaf",
       "cost": "feafewa",
@@ -42,15 +42,7 @@
       "id": 8
     },
     {
-      "placeId": "1",
-      "name": "The Leaning Tower of Pisa",
-      "description": "It leans",
-      "cost": "$1M",
-      "review": "",
-      "id": 9
-    },
-    {
-      "placeId": "1",
+      "placeId": 1,
       "name": "The Colosseum",
       "description": "test",
       "cost": "test",
@@ -58,7 +50,7 @@
       "id": 11
     },
     {
-      "placeId": "2",
+      "placeId": 2,
       "name": "test",
       "description": "test",
       "cost": "test",
@@ -66,7 +58,7 @@
       "id": 12
     },
     {
-      "placeId": "3",
+      "placeId": 3,
       "name": "test",
       "description": "",
       "cost": "",
@@ -74,12 +66,12 @@
       "id": 13
     },
     {
-      "placeId": "1",
-      "name": "The Colosseum",
+      "placeId": 2,
+      "name": "test interest",
       "description": "test",
       "cost": "test",
       "review": "",
-      "id": 14
+      "id": 15
     }
   ]
 }

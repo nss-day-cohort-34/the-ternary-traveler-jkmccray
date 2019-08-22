@@ -98,7 +98,7 @@ const renderPage = {
     interestCard.appendChild(interestName)
     interestCard.appendChild(interestDescription)
     interestCard.appendChild(interestCostInput)
-    interestCard.appendChild(interestReviewInput)
+    if (interestObj.review) {interestCard.appendChild(interestReviewInput)}
     interestCard.appendChild(saveBtn)
   }
 }
