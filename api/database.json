@@ -23,7 +23,17 @@
       "description": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
       "cost": "48.55",
       "review": "Lorem ipsum dolor amet sartorial sriracha offal photo booth celiac crucifix locavore. Skateboard meh seitan fixie, sustainable raclette jean shorts flannel pork belly. Selvage letterpress vice crucifix gentrify. Jean shorts cold-pressed jianbing cliche. Vape deep v four loko, vegan offal enamel pin retro.",
-      "id": 1
+      "id": 1,
+      "rating": 5
+    },
+    {
+      "placeId": 1,
+      "name": "The Leaning Tower of Pisa",
+      "description": "feafea",
+      "cost": "1222.00",
+      "review": "test",
+      "id": 2,
+      "rating": 4
     }
   ]
 }

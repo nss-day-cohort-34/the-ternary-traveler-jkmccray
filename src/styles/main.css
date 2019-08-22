@@ -99,6 +99,18 @@ button {
   margin: 5px 0 0 0;
 }
 
+.admission-span {
+  font-weight: bold;
+}
+
+.review-stars-select {
+  display: block;
+}
+
+.interest-rating {
+  font-size: 1.5em;
+}
+
 footer {
   text-align: end;
   margin: 10px;

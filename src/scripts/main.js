@@ -40,7 +40,8 @@ addInterestFormContainer.addEventListener("click", () => {
         name: interestName,
         description: interestDescription,
         cost: interestCost,
-        review: ""
+        review: "",
+        rating: ""
       }
       renderPage.renderInterestBtn()
       data.postNewInterest(newInterestObj)
@@ -81,7 +82,9 @@ placeContainer.addEventListener("click", () => {
   if (event.target.id.startsWith("save-review-btn")) {
     data.getSingleInterest(idNum)
       .then(interestObj => {
+        const interestRating = parseInt(document.querySelector("#interest-rating-select").value)
         const interestReview = document.querySelector("#interest-review-input").value
+        interestObj.rating = interestRating
         interestObj.review = interestReview
         const placeId = interestObj.placeId
         data.putInterest(interestObj)
