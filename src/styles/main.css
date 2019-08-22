@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .main-header {
@@ -45,14 +46,15 @@ button {
 }
 
 .place-div {
-  border: 1px solid black;
   width: 31%;
   padding: 10px;
   min-width: 230px;
+  background-color: whitesmoke;
 }
 
 .place-name-header {
   font-family: 'Libre Baskerville', serif;
+  text-align: center;
 }
 
 .interest-cards-container {
