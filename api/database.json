@@ -18,22 +18,6 @@
   ],
   "interests": [
     {
-      "placeId": "1",
-      "name": "test interest",
-      "description": "desc",
-      "cost": "cost????",
-      "review": "test review",
-      "id": 1
-    },
-    {
-      "placeId": "2",
-      "name": "test 1",
-      "description": "fewafew",
-      "cost": "feafea",
-      "review": "",
-      "id": 2
-    },
-    {
       "placeId": "3",
       "name": "test 1",
       "description": "fewafew",
@@ -45,17 +29,9 @@
       "placeId": "1",
       "name": "test 1",
       "description": "fewafew",
-      "cost": "feafea",
+      "cost": "edit test",
       "review": "",
       "id": 4
-    },
-    {
-      "placeId": "1",
-      "name": "test 2",
-      "description": "fewafea",
-      "cost": "feafewa",
-      "review": "",
-      "id": 5
     },
     {
       "placeId": "3",
@@ -66,28 +42,60 @@
       "id": 6
     },
     {
-      "placeId": "3",
-      "name": "",
-      "description": "",
-      "cost": "",
-      "review": "",
-      "id": 7
-    },
-    {
       "placeId": "2",
       "name": "test 5",
       "description": "feafewaf",
       "cost": "feafewa",
-      "review": "",
+      "review": "test review!!!",
       "id": 8
     },
     {
-      "placeId": "3",
-      "name": "12457f",
-      "description": "feawfea",
-      "cost": "feawfeaw",
+      "placeId": "1",
+      "name": "The Leaning Tower of Pisa",
+      "description": "It leans",
+      "cost": "$1M",
       "review": "",
       "id": 9
+    },
+    {
+      "placeId": "1",
+      "name": "test",
+      "description": "",
+      "cost": "",
+      "review": "",
+      "id": 10
+    },
+    {
+      "placeId": "1",
+      "name": "The Colosseum",
+      "description": "test",
+      "cost": "test",
+      "review": "",
+      "id": 11
+    },
+    {
+      "placeId": "2",
+      "name": "test",
+      "description": "test",
+      "cost": "test",
+      "review": "",
+      "id": 12
+    },
+    {
+      "placeId": "3",
+      "name": "test",
+      "description": "",
+      "cost": "",
+      "review": "",
+      "id": 13
+    },
+    {
+      "placeId": "1",
+      "name": "The Colosseum",
+      "description": "test",
+      "cost": "test",
+      "review": "",
+      "id": 14
     }
   ]
 }

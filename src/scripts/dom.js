@@ -47,21 +47,21 @@ const renderPage = {
     formDiv.appendChild(cancelNewInterestBtn)
     data.getAllDestinations()
     .then(places => {
-      places.forEach(placeObj => this.renderPlaceOptions(placeObj))
+      places.forEach(placeObj => this.renderPlaceOption(placeObj))
     })
   },
-  renderPlaceOptions(placeObj) {
+  renderPlaceOption(placeObj) {
     const interestPlaceSelect = document.querySelector("#interest-place-select")
     const interestPlaceOption = elFactory("option", {value: `place-option--${placeObj.id}`}, placeObj.name)
     interestPlaceSelect.appendChild(interestPlaceOption)
   },
   renderInterest(interestObj) {
     const interestCardsContainer = document.querySelector(`#interest-cards-container--${interestObj.placeId}`)
-    const interestDiv = elFactory("div", {classList: ["interest-card"]})
-    const interestName = elFactory("h2", {classList: ["interest-card-name"]}, interestObj.name)
-    const interestDescription = elFactory("p", {classList: ["interest-card-description"]}, interestObj.description)
-    const interestCost = elFactory("p", {classList: ["interest-card-cost"]}, interestObj.cost)
-    const interestReview = elFactory("p", {classList: ["interest-card-review"]}, `Review: ${interestObj.review}`)
+    const interestDiv = elFactory("div", {classList: ["interest-card"], id: `interest-card--${interestObj.id}`})
+    const interestName = elFactory("h2", {classList: ["interest-card-name"], id: `interest-card-name--${interestObj.id}`}, interestObj.name)
+    const interestDescription = elFactory("p", {classList: ["interest-card-description"], id: `interest-card-description--${interestObj.id}`}, interestObj.description)
+    const interestCost = elFactory("p", {classList: ["interest-card-cost"], id: `interest-card-cost--${interestObj.id}`}, interestObj.cost)
+    const interestReview = elFactory("p", {classList: ["interest-card-review"], id: `interest-card-review--${interestObj.id}`}, `Review: ${interestObj.review}`)
     const addReviewInterestBtn = elFactory("button", {classList: ["review-interest-btn"], id: `review-interest-btn--${interestObj.id}`}, "Leave a Review")
     const editInterestBtn = elFactory("button", {classList: ["edit-interest-btn"], id: `edit-interest-btn--${interestObj.id}`}, "Edit")
     const deleteInterestBtn = elFactory("button", {classList: ["delete-interest-btn"], id: `delete-interest-btn--${interestObj.id}`}, "Delete")
@@ -72,6 +72,34 @@ const renderPage = {
     interestObj.review ? interestDiv.appendChild(interestReview) : interestDiv.appendChild(addReviewInterestBtn)
     interestDiv.appendChild(editInterestBtn)
     interestDiv.appendChild(deleteInterestBtn)
+  },
+  renderReviewForm(interestObj) {
+    const interestCard = document.querySelector(`#interest-card--${interestObj.id}`)
+    const interestName = elFactory("h2", {classList: ["interest-card-name"]}, interestObj.name)
+    const interestDescription = elFactory("p", {classList: ["interest-card-description"]}, interestObj.description)
+    const interestCost = elFactory("p", {classList: ["interest-card-cost"], id: `interest-card-cost--${interestObj.id}`}, interestObj.cost)
+    const interestReviewInput = elFactory("input", {id: "interest-review-input", placeholder: "Leave review here"})
+    const saveBtn = elFactory("button", {classList: ["save-review-btn"], id: `save-review-btn--${interestObj.id}`}, "Save Review")
+    interestCard.innerHTML = ""
+    interestCard.appendChild(interestName)
+    interestCard.appendChild(interestDescription)
+    interestCard.appendChild(interestCost)
+    interestCard.appendChild(interestReviewInput)
+    interestCard.appendChild(saveBtn)
+  },
+  renderEditInterestForm(interestObj) {
+    const interestCard = document.querySelector(`#interest-card--${interestObj.id}`)
+    const interestName = elFactory("h2", {classList: ["interest-card-name"], id: `edit-interest-card-name--${interestObj.id}`}, interestObj.name)
+    const interestDescription = elFactory("p", {classList: ["interest-card-description"], id: `edit-interest-card-description--${interestObj.id}`}, interestObj.description)
+    const interestCostInput = elFactory("input", {id: "edit-interest-cost-input", value: interestObj.cost})
+    const interestReviewInput = elFactory("input", {id: "edit-interest-review-input", value: interestObj.review})
+    const saveBtn = elFactory("button", {classList: ["save-edits-btn"], id: `save-edits-btn--${interestObj.id}`}, "Save Changes")
+    interestCard.innerHTML = ""
+    interestCard.appendChild(interestName)
+    interestCard.appendChild(interestDescription)
+    interestCard.appendChild(interestCostInput)
+    interestCard.appendChild(interestReviewInput)
+    interestCard.appendChild(saveBtn)
   }
 }
 

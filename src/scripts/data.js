@@ -10,7 +10,7 @@ const data = {
       .then(newInterest => newInterest.json())
   },
   deleteInterest(id) {
-    return fetch(`http://localhost:8088/interest/${id}`, {
+    return fetch(`http://localhost:8088/interests/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -19,7 +19,7 @@ const data = {
     })
       .then(deletedInterest => deletedInterest.json())
   },
-  putTask(interestObj) {
+  putInterest(interestObj) {
     return fetch(`http://localhost:8088/interests/${interestObj.id}`, {
       method: "PUT",
       headers: {
