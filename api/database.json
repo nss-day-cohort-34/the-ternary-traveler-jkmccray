@@ -28,21 +28,21 @@
     },
     {
       "placeId": 1,
-      "name": "The Leaning Tower of Pisa",
-      "description": "feafea",
-      "cost": "1222.00",
+      "name": "Leaning Tower of Pisa",
+      "description": "The Leaning Tower of Pisa or simply the Tower of Pisa is the campanile, or freestanding bell tower, of the cathedral of the Italian city of Pisa, known worldwide for its nearly four-degree lean, the result of an unstable foundation.",
+      "cost": "24.00",
       "review": "",
-      "id": 2,
-      "rating": 4
+      "rating": "",
+      "id": 4
     },
     {
       "placeId": 2,
-      "name": "test",
-      "description": "test",
-      "cost": "188888.00",
-      "review": "test",
+      "name": "The Matterhorn",
+      "description": "The Matterhorn, Switzerland's iconic pointed peak is one of the highest mountains in the Alps. On the border with Italy, this legendary peak rises to 4,478 meters, and its four steep faces lie in the direction of the compass points. ",
+      "cost": "100.00",
+      "review": "Mlkshk meggings next level, everyday carry XOXO ethical brooklyn disrupt succulents af pitchfork fixie organic williamsburg. Ennui cold-pressed brooklyn forage. Ethical chicharrones distillery migas blog blue bottle four loko actually neutra green juice tilde vexillologist kale chips offal. Lomo pabst fingerstache, chillwave enamel pin taxidermy tousled hashtag 90's.",
       "rating": 4,
-      "id": 3
+      "id": 5
     }
   ]
 }
