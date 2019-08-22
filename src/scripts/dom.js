@@ -33,7 +33,7 @@ const renderPage = {
     const interestDescriptionInput = elFactory("input", {id: "interest-description-input", placeholder: "Interest Description"})
     const interestCostInput = elFactory("input", {id: "interest-cost-input", placeholder: "Cost"})
     const interestPlaceSelect = elFactory("select", {id: "interest-place-select"})
-    const placeholderOption = elFactory("option", {}, "Select a destination")
+    const placeholderOption = elFactory("option", {value: "not selected"}, "Select a destination")
     const saveNewInterestBtn = elFactory("button", {id: "save-new-interest-btn"}, "Save New Interest")
     const cancelNewInterestBtn = elFactory("button", {id: "cancel-new-interest-btn"}, "Cancel")
     addInterestFormContainer.innerHTML = ""
@@ -89,8 +89,8 @@ const renderPage = {
   },
   renderEditInterestForm(interestObj) {
     const interestCard = document.querySelector(`#interest-card--${interestObj.id}`)
-    const interestName = elFactory("h2", {classList: ["interest-card-name"], id: `edit-interest-card-name--${interestObj.id}`}, interestObj.name)
-    const interestDescription = elFactory("p", {classList: ["interest-card-description"], id: `edit-interest-card-description--${interestObj.id}`}, interestObj.description)
+    const interestName = elFactory("h2", {classList: ["interest-card-name"]}, interestObj.name)
+    const interestDescription = elFactory("p", {classList: ["interest-card-description"]}, interestObj.description)
     const interestCostInput = elFactory("input", {id: "edit-interest-cost-input", value: interestObj.cost})
     const interestReviewInput = elFactory("input", {id: "edit-interest-review-input", value: interestObj.review})
     const saveBtn = elFactory("button", {classList: ["save-edits-btn"], id: `save-edits-btn--${interestObj.id}`}, "Save Changes")

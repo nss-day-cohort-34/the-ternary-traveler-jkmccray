@@ -21,31 +21,23 @@
       "placeId": 3,
       "name": "test 1",
       "description": "fewafew",
-      "cost": "feafea",
-      "review": "",
+      "cost": "test",
+      "review": "test review!!!?????",
       "id": 3
-    },
-    {
-      "placeId": 3,
-      "name": "test 4",
-      "description": "feawfeaw",
-      "cost": "feafeaw",
-      "review": "",
-      "id": 6
     },
     {
       "placeId": 2,
       "name": "test 5",
       "description": "feafewaf",
-      "cost": "feafewa",
-      "review": "test review!!!",
+      "cost": "test123",
+      "review": "test review!!!?????",
       "id": 8
     },
     {
       "placeId": 1,
       "name": "The Colosseum",
       "description": "test",
-      "cost": "test",
+      "cost": "test1111111111111111",
       "review": "",
       "id": 11
     },
@@ -54,24 +46,16 @@
       "name": "test",
       "description": "test",
       "cost": "test",
-      "review": "",
+      "review": "review111111111111",
       "id": 12
     },
     {
-      "placeId": 3,
-      "name": "test",
-      "description": "",
-      "cost": "",
-      "review": "",
-      "id": 13
-    },
-    {
       "placeId": 2,
-      "name": "test interest",
-      "description": "test",
-      "cost": "test",
+      "name": "qwerty",
+      "description": "ytrewq",
+      "cost": "qw",
       "review": "",
-      "id": 15
+      "id": 14
     }
   ]
 }

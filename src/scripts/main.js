@@ -24,30 +24,33 @@ data.getAllDestinations()
     })
   })
 
-const interestFormHandler = () => {
+addInterestFormContainer.addEventListener("click", () => {
   if (event.target.id === "add-interest-btn") {
     renderPage.renderAddInterestForm()
-  } else if (event.target.id === "save-new-interest-btn") {
+  }
+  if (event.target.id === "save-new-interest-btn") {
     const interestName = document.querySelector("#interest-name-input").value
     const interestDescription = document.querySelector("#interest-description-input").value
     const interestCost = document.querySelector("#interest-cost-input").value
-    const placeId = parseInt(document.querySelector("#interest-place-select").value.split("--")[1])
-    const newInterestObj = {
-      placeId: placeId,
-      name: interestName,
-      description: interestDescription,
-      cost: interestCost,
-      review: ""
-    }
-    renderPage.renderInterestBtn()
-    data.postNewInterest(newInterestObj)
-      .then(displayAllInterests(placeId))
-  } else if (event.target.id === "cancel-new-interest-btn") {
+    const placeSelect = document.querySelector("#interest-place-select").value
+    if (interestName && interestDescription && interestCost && placeSelect !== "not selected") {
+      const placeId = parseInt(placeSelect.split("--")[1])
+      const newInterestObj = {
+        placeId: placeId,
+        name: interestName,
+        description: interestDescription,
+        cost: interestCost,
+        review: ""
+      }
+      renderPage.renderInterestBtn()
+      data.postNewInterest(newInterestObj)
+        .then(displayAllInterests(placeId))
+    } else { alert("Fill out all fields") }
+  }
+  if (event.target.id === "cancel-new-interest-btn") {
     renderPage.renderInterestBtn()
   }
-}
-
-addInterestFormContainer.addEventListener("click", interestFormHandler)
+})
 
 placeContainer.addEventListener("click", () => {
   const idNum = event.target.id.split("--")[1]
@@ -69,7 +72,7 @@ placeContainer.addEventListener("click", () => {
         const interestCost = document.querySelector("#edit-interest-cost-input")
         const interestReview = document.querySelector("#edit-interest-review-input")
         interestObj.cost = interestCost.value
-        if (interestReview) {interestObj.review = interestReview.value}
+        if (interestReview) { interestObj.review = interestReview.value }
         const placeId = interestObj.placeId
         data.putInterest(interestObj)
           .then(() => displayAllInterests(placeId))
