@@ -13,7 +13,7 @@ const renderPage = {
   },
   renderInterestBtn() {
     const addInterestFormContainer = document.querySelector("#add-interest-form-container")
-    const addInterestBtn = elFactory("button", {id: "add-interest-btn", classList: ["add-interest-btn"]}, "Add an Interest")
+    const addInterestBtn = elFactory("button", {id: "add-interest-btn", classList: ["add-interest-btn"]}, "add an interest")
     addInterestFormContainer.innerHTML = ""
     addInterestFormContainer.appendChild(addInterestBtn)
   },
@@ -58,7 +58,7 @@ const renderPage = {
   renderInterest(interestObj) {
     const interestCardsContainer = document.querySelector(`#interest-cards-container--${interestObj.placeId}`)
     const interestDiv = elFactory("div", {classList: ["interest-card"], id: `interest-card--${interestObj.id}`})
-    const interestName = elFactory("h2", {classList: ["interest-card-name"], id: `interest-card-name--${interestObj.id}`}, interestObj.name)
+    const interestName = elFactory("h3", {classList: ["interest-card-name"], id: `interest-card-name--${interestObj.id}`}, interestObj.name)
     const interestDescription = elFactory("p", {classList: ["interest-card-description"], id: `interest-card-description--${interestObj.id}`}, interestObj.description)
     const interestCost = elFactory("p", {classList: ["interest-card-cost"], id: `interest-card-cost--${interestObj.id}`}, interestObj.cost)
     const interestReview = elFactory("p", {classList: ["interest-card-review"], id: `interest-card-review--${interestObj.id}`}, `Review: ${interestObj.review}`)
@@ -75,7 +75,7 @@ const renderPage = {
   },
   renderReviewForm(interestObj) {
     const interestCard = document.querySelector(`#interest-card--${interestObj.id}`)
-    const interestName = elFactory("h2", {classList: ["interest-card-name"]}, interestObj.name)
+    const interestName = elFactory("h3", {classList: ["interest-card-name"]}, interestObj.name)
     const interestDescription = elFactory("p", {classList: ["interest-card-description"]}, interestObj.description)
     const interestCost = elFactory("p", {classList: ["interest-card-cost"], id: `interest-card-cost--${interestObj.id}`}, interestObj.cost)
     const interestReviewInput = elFactory("input", {id: "interest-review-input", placeholder: "Leave review here"})

@@ -6,30 +6,64 @@
 
 .main-header {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0;font-family: 'Livvic', sans-serif;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.add-interest-btn {
+  margin-bottom: 10px; 
+  height: 60px;
+  width: 200px;
+  font-size: 1.35em;
+  font-family: 'Roboto', sans-serif;
+}
+
+#add-interest-form-container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+input {
+  margin: 5px 5px 5px 0;
+}
+
+button {
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px 5px 5px 0;
+  box-shadow: none;
+  border-image: none;
+  -webkit-appearance: none;
+  border: .5px solid gray;
 }
 
 #place-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 95%;
   margin: 0 auto;
 }
 
 .place-div {
   border: 1px solid black;
-  width: 27%;
+  width: 31%;
+  padding: 10px;
+  min-width: 230px;
 }
 
-.add-interest-btn {
-  margin: 10px auto; 
-}
-
-input {
-  margin: 5px 0;
+.place-name-header {
+  font-family: 'Libre Baskerville', serif;
 }
 
 .interest-cards-container {
   overflow-y: auto;
   height: 25em;
+}
+
+.interest-card {
+  margin: 10px 0;
+}
+
+.interest-card-name {
+  font-family: 'Libre Baskerville', serif;
 }
