@@ -71,8 +71,10 @@ placeContainer.addEventListener("click", () => {
     data.getSingleInterest(idNum)
       .then(interestObj => {
         const interestCost = parseFloat(document.querySelector("#edit-interest-cost-input").value).toFixed(2)
+        const interestRating = parseInt(document.querySelector("#interest-rating-select").value)
         const interestReview = document.querySelector("#edit-interest-review-input")
         interestObj.cost = interestCost
+        interestObj.rating = interestRating
         if (interestReview) { interestObj.review = interestReview.value }
         const placeId = interestObj.placeId
         data.putInterest(interestObj)

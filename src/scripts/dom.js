@@ -80,9 +80,7 @@ const renderPage = {
     interestDiv.appendChild(deleteInterestBtn)
   },
   renderReviewForm(interestObj) {
-    const interestCard = document.querySelector(`#interest-card--${interestObj.id}`)
-    const interestName = elFactory("h3", {classes: ["interest-card-name"]}, interestObj.name)
-    const interestDescription = elFactory("p", {classes: ["interest-card-description"]}, interestObj.description)
+    const costAndReviewContainer = document.querySelector(`#cost-and-review-container--${interestObj.id}`)
     const interestCost = elFactory("p", {classes: ["interest-card-cost"], id: `interest-card-cost--${interestObj.id}`}, interestObj.cost)
     const interestStarsSelect = elFactory("select", {id: "interest-rating-select", classes: ["review-stars-select"]})
     const interestStarOption0 = elFactory("option", {value: 0}, "Select Rating")
@@ -93,33 +91,41 @@ const renderPage = {
     const interestStarOption5 = elFactory("option", {value: 5}, "☆☆☆☆☆")
     const interestReviewInput = elFactory("input", {id: "interest-review-input", placeholder: "Leave review here"})
     const saveBtn = elFactory("button", {classes: ["save-review-btn"], id: `save-review-btn--${interestObj.id}`}, "Save Review")
-    interestCard.innerHTML = ""
-    interestCard.appendChild(interestName)
-    interestCard.appendChild(interestDescription)
-    interestCard.appendChild(interestCost)
-    interestCard.appendChild(interestStarsSelect)
+    costAndReviewContainer.innerHTML = ""
+    costAndReviewContainer.appendChild(interestCost)
+    costAndReviewContainer.appendChild(interestStarsSelect)
     interestStarsSelect.appendChild(interestStarOption0)
     interestStarsSelect.appendChild(interestStarOption1)
     interestStarsSelect.appendChild(interestStarOption2)
     interestStarsSelect.appendChild(interestStarOption3)
     interestStarsSelect.appendChild(interestStarOption4)
     interestStarsSelect.appendChild(interestStarOption5)
-    interestCard.appendChild(interestReviewInput)
-    interestCard.appendChild(saveBtn)
+    costAndReviewContainer.appendChild(interestReviewInput)
+    costAndReviewContainer.appendChild(saveBtn)
   },
   renderEditInterestForm(interestObj) {
-    const interestCard = document.querySelector(`#interest-card--${interestObj.id}`)
-    const interestName = elFactory("h2", {classes: ["interest-card-name"]}, interestObj.name)
-    const interestDescription = elFactory("p", {classes: ["interest-card-description", "interest-card-text"]}, interestObj.description)
+    const costAndReviewContainer = document.querySelector(`#cost-and-review-container--${interestObj.id}`)
     const interestCostInput = elFactory("input", {id: "edit-interest-cost-input", value: interestObj.cost})
+    const interestStarsSelect = elFactory("select", {id: "interest-rating-select", classes: ["review-stars-select"], value: interestObj.rating})
+    const interestStarOption0 = elFactory("option", {value: 0}, "Select Rating")
+    const interestStarOption1 = elFactory("option", {value: 1}, "☆")
+    const interestStarOption2 = elFactory("option", {value: 2}, "☆☆")
+    const interestStarOption3 = elFactory("option", {value: 3}, "☆☆☆")
+    const interestStarOption4 = elFactory("option", {value: 4}, "☆☆☆☆")
+    const interestStarOption5 = elFactory("option", {value: 5}, "☆☆☆☆☆")
     const interestReviewInput = elFactory("input", {id: "edit-interest-review-input", value: interestObj.review})
     const saveBtn = elFactory("button", {classes: ["save-edits-btn"], id: `save-edits-btn--${interestObj.id}`}, "Save Changes")
-    interestCard.innerHTML = ""
-    interestCard.appendChild(interestName)
-    interestCard.appendChild(interestDescription)
-    interestCard.appendChild(interestCostInput)
-    if (interestObj.review) {interestCard.appendChild(interestReviewInput)}
-    interestCard.appendChild(saveBtn)
+    costAndReviewContainer.innerHTML = ""
+    costAndReviewContainer.appendChild(interestCostInput)
+    costAndReviewContainer.appendChild(interestStarsSelect)
+    interestStarsSelect.appendChild(interestStarOption0)
+    interestStarsSelect.appendChild(interestStarOption1)
+    interestStarsSelect.appendChild(interestStarOption2)
+    interestStarsSelect.appendChild(interestStarOption3)
+    interestStarsSelect.appendChild(interestStarOption4)
+    interestStarsSelect.appendChild(interestStarOption5)
+    if (interestObj.review) {costAndReviewContainer.appendChild(interestReviewInput)}
+    costAndReviewContainer.appendChild(saveBtn)
   }
 }
 

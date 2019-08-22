@@ -31,9 +31,18 @@
       "name": "The Leaning Tower of Pisa",
       "description": "feafea",
       "cost": "1222.00",
-      "review": "test",
+      "review": "",
       "id": 2,
       "rating": 4
+    },
+    {
+      "placeId": 2,
+      "name": "test",
+      "description": "test",
+      "cost": "188888.00",
+      "review": "test",
+      "rating": 4,
+      "id": 3
     }
   ]
 }
