@@ -31,7 +31,7 @@ addInterestFormContainer.addEventListener("click", () => {
   if (event.target.id === "save-new-interest-btn") {
     const interestName = document.querySelector("#interest-name-input").value
     const interestDescription = document.querySelector("#interest-description-input").value
-    const interestCost = document.querySelector("#interest-cost-input").value
+    const interestCost = parseFloat(document.querySelector("#interest-cost-input").value).toFixed(2)
     const placeSelect = document.querySelector("#interest-place-select").value
     if (interestName && interestDescription && interestCost && placeSelect !== "not selected") {
       const placeId = parseInt(placeSelect.split("--")[1])
@@ -69,9 +69,9 @@ placeContainer.addEventListener("click", () => {
   if (event.target.id.startsWith("save-edits-btn")) {
     data.getSingleInterest(idNum)
       .then(interestObj => {
-        const interestCost = document.querySelector("#edit-interest-cost-input")
+        const interestCost = parseFloat(document.querySelector("#edit-interest-cost-input").value).toFixed(2)
         const interestReview = document.querySelector("#edit-interest-review-input")
-        interestObj.cost = interestCost.value
+        interestObj.cost = interestCost
         if (interestReview) { interestObj.review = interestReview.value }
         const placeId = interestObj.placeId
         data.putInterest(interestObj)

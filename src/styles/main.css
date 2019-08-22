@@ -3,16 +3,20 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  color: #00334e;
 }
 
 .main-header {
   text-align: center;
-  margin: 20px 0;font-family: 'Livvic', sans-serif;
+  margin: 20px auto;
+  font-family: 'Livvic', sans-serif;
   font-family: 'Libre Baskerville', serif;
+  border-bottom: 1px solid #145374;
+  width: 200px;
+  padding-bottom: 10px;
 }
 
 .add-interest-btn {
-  margin-bottom: 10px; 
   height: 60px;
   width: 200px;
   font-size: 1.35em;
@@ -22,8 +26,22 @@
 #add-interest-form-container {
   width: 95%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 80px;
 }
 
+#form-div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: whitesmoke;
+  padding: 30px;
+  position: fixed;
+  border: 1px solid gray;
+  height: 250px;
+  width: 300px;
+}
 input {
   margin: 5px 5px 5px 0;
 }
@@ -35,21 +53,25 @@ button {
   box-shadow: none;
   border-image: none;
   -webkit-appearance: none;
-  border: .5px solid gray;
+  border: .5px solid #00334e;
+  background-color: #145374;
+  color: #e8e8e8;
 }
 
 #place-container {
   display: flex;
   justify-content: space-between;
-  width: 95%;
-  margin: 0 auto;
+  margin: 0 0 20px 0;
+  background-color: #5588a3;
+  padding: 20px;
 }
 
 .place-div {
   width: 31%;
   padding: 10px;
   min-width: 230px;
-  background-color: whitesmoke;
+  background-color: #e8e8e8;
+  border-radius: 5px;
 }
 
 .place-name-header {
@@ -64,8 +86,30 @@ button {
 
 .interest-card {
   margin: 10px 0;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .interest-card-name {
   font-family: 'Libre Baskerville', serif;
+}
+
+.interest-card-text {
+  margin: 5px 0 0 0;
+}
+
+footer {
+  text-align: end;
+  margin: 10px;
+}
+
+.icon-container {
+  display: flex;
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+.icon-container__icon {
+  margin: 0 5px 0 5px;
 }
